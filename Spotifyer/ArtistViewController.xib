@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArtistViewController" customModule="Spotifyer" customModuleProvider="target">
             <connections>
+                <outlet property="bioTextView" destination="Og5-Gm-MAv" id="bae-M6-j9k"/>
+                <outlet property="nameLabel" destination="ser-Ea-oeL" id="TV2-4c-QLs"/>
+                <outlet property="photoView" destination="XjH-Hh-fqw" id="1ep-qh-Zfo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +17,58 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ser-Ea-oeL">
+                    <rect key="frame" x="20" y="20" width="560" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Og5-Gm-MAv">
+                    <rect key="frame" x="20" y="252" width="560" height="328"/>
+                    <color key="backgroundColor" red="0.14937900639999999" green="0.14937900639999999" blue="0.14937900639999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="frog.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XjH-Hh-fqw" userLabel="Artist Photo">
+                    <rect key="frame" x="225" y="57" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="QMx-NH-0tM"/>
+                        <constraint firstAttribute="width" constant="150" id="UTE-hO-Lz1"/>
+                        <constraint firstAttribute="width" constant="150" id="jYt-fb-qT7"/>
+                        <constraint firstAttribute="height" constant="150" id="tE2-4F-0W8"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="QMx-NH-0tM"/>
+                            <exclude reference="UTE-hO-Lz1"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ser-Ea-oeL" firstAttribute="leading" secondItem="Og5-Gm-MAv" secondAttribute="leading" id="1rL-to-jpI"/>
+                <constraint firstItem="ser-Ea-oeL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2Um-Bb-MB1"/>
+                <constraint firstItem="ser-Ea-oeL" firstAttribute="centerX" secondItem="XjH-Hh-fqw" secondAttribute="centerX" id="9D9-JF-9eD"/>
+                <constraint firstItem="ser-Ea-oeL" firstAttribute="trailing" secondItem="Og5-Gm-MAv" secondAttribute="trailing" id="OYb-vY-Cdk"/>
+                <constraint firstAttribute="bottom" secondItem="Og5-Gm-MAv" secondAttribute="bottom" constant="20" id="Qrj-G2-pFQ"/>
+                <constraint firstItem="Og5-Gm-MAv" firstAttribute="top" secondItem="XjH-Hh-fqw" secondAttribute="bottom" constant="45" id="ZKb-76-jF1"/>
+                <constraint firstItem="XjH-Hh-fqw" firstAttribute="top" secondItem="ser-Ea-oeL" secondAttribute="bottom" constant="8" symbolic="YES" id="bFr-14-Gxh"/>
+                <constraint firstItem="ser-Ea-oeL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="e8t-Zw-qLx"/>
+                <constraint firstItem="ser-Ea-oeL" firstAttribute="centerX" secondItem="XjH-Hh-fqw" secondAttribute="centerX" id="oxU-yR-hV8"/>
+                <constraint firstItem="ser-Ea-oeL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="yJk-Gc-FtG"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="9D9-JF-9eD"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="frog.jpg" width="400" height="300"/>
+    </resources>
 </document>

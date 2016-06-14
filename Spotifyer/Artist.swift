@@ -11,5 +11,5 @@ import Foundation
 struct Artist {
     let name: String
     let biography: String
-    let photoURL: NSURL
+    let photoURL: NSURL?
 }

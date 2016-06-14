@@ -18,6 +18,7 @@
 		83B1C5391D10821C004ACC01 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1C5381D10821C004ACC01 /* Artist.swift */; };
 		83B1C53C1D10839E004ACC01 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1C53A1D10839E004ACC01 /* ArtistViewController.swift */; };
 		83B1C53D1D10839E004ACC01 /* ArtistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B1C53B1D10839E004ACC01 /* ArtistViewController.xib */; };
+		83B1C5421D109BF7004ACC01 /* frog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83B1C5411D109BF7004ACC01 /* frog.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		83B1C5381D10821C004ACC01 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		83B1C53A1D10839E004ACC01 /* ArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		83B1C53B1D10839E004ACC01 /* ArtistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistViewController.xib; sourceTree = "<group>"; };
+		83B1C5411D109BF7004ACC01 /* frog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frog.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				83B1C5401D1083CC004ACC01 /* Services */,
 				83B1C53F1D1083BD004ACC01 /* View Controllers */,
 				83B1C5011D105C0C004ACC01 /* Assets.xcassets */,
+				83B1C5411D109BF7004ACC01 /* frog.jpg */,
 				83B1C4FA1D105C0C004ACC01 /* AppDelegate.swift */,
 				83B1C5031D105C0C004ACC01 /* LaunchScreen.storyboard */,
 				83B1C5061D105C0C004ACC01 /* Info.plist */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B1C5051D105C0C004ACC01 /* LaunchScreen.storyboard in Resources */,
+				83B1C5421D109BF7004ACC01 /* frog.jpg in Resources */,
 				83B1C5331D106CE5004ACC01 /* ArtistSearchController.xib in Resources */,
 				83B1C5021D105C0C004ACC01 /* Assets.xcassets in Resources */,
 				83B1C53D1D10839E004ACC01 /* ArtistViewController.xib in Resources */,

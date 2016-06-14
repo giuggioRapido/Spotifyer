@@ -12,6 +12,10 @@ class ArtistViewController: UIViewController {
 
     let artist: Artist?
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var bioTextView: UITextView!
+
     required init?(coder aDecoder: NSCoder) {
         artist = nil
         super.init(coder: aDecoder)
@@ -25,5 +29,17 @@ class ArtistViewController: UIViewController {
     init(artist: Artist) {
         self.artist = artist
         super.init(nibName: "ArtistViewController", bundle: nil)
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        populateArtistFields()
+    }
+
+    func populateArtistFields() {
+        if let artist = artist {
+            nameLabel.text = artist.name
+            bioTextView.text = artist.biography
+        }
     }
 }
