@@ -12,6 +12,9 @@
 		83B1C5051D105C0C004ACC01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B1C5031D105C0C004ACC01 /* LaunchScreen.storyboard */; };
 		83B1C5101D105C0C004ACC01 /* SpotifyerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1C50F1D105C0C004ACC01 /* SpotifyerTests.swift */; };
 		83B1C51B1D105C0C004ACC01 /* SpotifyerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1C51A1D105C0C004ACC01 /* SpotifyerUITests.swift */; };
+		83B1C5321D106CE5004ACC01 /* ArtistSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1C5301D106CE5004ACC01 /* ArtistSearchController.swift */; };
+		83B1C5331D106CE5004ACC01 /* ArtistSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B1C5311D106CE5004ACC01 /* ArtistSearchController.xib */; };
+		83B1C5351D106D0D004ACC01 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1C5341D106D0D004ACC01 /* RequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		83B1C5161D105C0C004ACC01 /* SpotifyerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B1C51A1D105C0C004ACC01 /* SpotifyerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyerUITests.swift; sourceTree = "<group>"; };
 		83B1C51C1D105C0C004ACC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83B1C5301D106CE5004ACC01 /* ArtistSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistSearchController.swift; sourceTree = "<group>"; };
+		83B1C5311D106CE5004ACC01 /* ArtistSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistSearchController.xib; sourceTree = "<group>"; };
+		83B1C5341D106D0D004ACC01 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +99,11 @@
 		83B1C4F91D105C0C004ACC01 /* Spotifyer */ = {
 			isa = PBXGroup;
 			children = (
-				83B1C4FA1D105C0C004ACC01 /* AppDelegate.swift */,
+				83B1C5341D106D0D004ACC01 /* RequestManager.swift */,
+				83B1C5301D106CE5004ACC01 /* ArtistSearchController.swift */,
+				83B1C5311D106CE5004ACC01 /* ArtistSearchController.xib */,
 				83B1C5011D105C0C004ACC01 /* Assets.xcassets */,
+				83B1C4FA1D105C0C004ACC01 /* AppDelegate.swift */,
 				83B1C5031D105C0C004ACC01 /* LaunchScreen.storyboard */,
 				83B1C5061D105C0C004ACC01 /* Info.plist */,
 			);
@@ -224,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B1C5051D105C0C004ACC01 /* LaunchScreen.storyboard in Resources */,
+				83B1C5331D106CE5004ACC01 /* ArtistSearchController.xib in Resources */,
 				83B1C5021D105C0C004ACC01 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B1C5351D106D0D004ACC01 /* RequestManager.swift in Sources */,
+				83B1C5321D106CE5004ACC01 /* ArtistSearchController.swift in Sources */,
 				83B1C4FB1D105C0C004ACC01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
