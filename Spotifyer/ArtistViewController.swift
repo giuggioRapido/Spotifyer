@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArtistViewController: UIViewController {
+final class ArtistViewController: UIViewController {
 
     let artist: Artist?
 
@@ -36,7 +36,7 @@ class ArtistViewController: UIViewController {
         populateArtistFields()
     }
 
-    func populateArtistFields() {
+    private func populateArtistFields() {
         if let artist = artist {
             nameLabel.text = artist.name
             bioTextView.text = artist.biography

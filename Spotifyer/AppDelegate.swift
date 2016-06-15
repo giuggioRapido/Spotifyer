@@ -16,14 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let bio  = "blahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblah"
-        let artist = Artist(name: "Chris Shea", biography: bio, photoURL: nil)
-        let artistVC = ArtistViewController(artist: artist)
+        let manager = RequestManager.sharedManager
+        manager.searchArtistName("Bonobo") { (result) in
 
-        window?.rootViewController = artistVC
-        window?.makeKeyAndVisible()
-
+        }
 
         return true
     }
