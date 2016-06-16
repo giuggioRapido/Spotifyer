@@ -16,11 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-        let manager = RequestManager.sharedManager
-        manager.searchArtistName("Bonobo") { (result) in
-
-        }
-
         return true
     }
 

@@ -10,46 +10,56 @@ import Foundation
 
 final class RequestManager {
     static let sharedManager = RequestManager()
-    typealias Artists = [Artist]
 
-    enum Result {
-        case Success(Artists)
+    typealias ResultHandler = (RequestResult) -> Void
+
+    enum RequestResult {
+        case Success(NSData)
         case Error(NSError)
-    }
-
-    typealias CompletionHandler = (Result) -> Void
-
-    func searchArtistName(name: String, completion: CompletionHandler) {
-
-        let query = Endpoints.Search + searchQueryForArtistName(name)
-
-        guard let url = NSURL(string: query) else {
-            print("Could not create URL from query: \(query)")
-            return
-        }
-
-        let request = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "GET"
-
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: config)
-
-        let task = session.dataTaskWithRequest(request) { (data, response, error) in
-            print(response)
-        }
-
-        task.resume()
     }
 
     private enum Endpoints {
         static let Search = "https://api.spotify.com/v1/search"
     }
 
+    func searchArtistName(name: String, completion: ResultHandler) {
+
+        let query = Endpoints.Search + searchQueryForArtistName(name)
+
+        guard let searchURL = NSURL(string: query) else {
+            print("Could not create URL from query: \(query)")
+            return
+        }
+
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: config)
+
+        let searchRequest = NSMutableURLRequest(URL: searchURL)
+        searchRequest.HTTPMethod = "GET"
+
+        let task = session.dataTaskWithRequest(searchRequest) { (data, response, error) in
+            if let error = error {
+                let result = RequestResult.Error(error)
+                completion(result)
+                return
+            }
+
+            if let json = data {
+                let result = RequestResult.Success(json)
+                completion(result)
+                return
+            }
+        }
+
+        task.resume()
+    }
+
     private func searchQueryForArtistName(name: String) -> String {
-        let formattedName = name.stringByReplacingOccurrencesOfString(" ",
-                                                                      withString: "+",
-                                                                      options: .CaseInsensitiveSearch,
-                                                                      range: nil)
+        let formattedName =
+            name.stringByReplacingOccurrencesOfString(" ",
+                                                      withString: "+",
+                                                      options: .CaseInsensitiveSearch,
+                                                      range: nil)
         return "?q=\(formattedName)&type=artist"
     }
 }
