@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8369839F1D13481D0018E9B1 /* SearchResultsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369839E1D13481D0018E9B1 /* SearchResultsData.swift */; };
 		83B1C4FB1D105C0C004ACC01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1C4FA1D105C0C004ACC01 /* AppDelegate.swift */; };
 		83B1C5021D105C0C004ACC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B1C5011D105C0C004ACC01 /* Assets.xcassets */; };
 		83B1C5051D105C0C004ACC01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B1C5031D105C0C004ACC01 /* LaunchScreen.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8369839E1D13481D0018E9B1 /* SearchResultsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsData.swift; sourceTree = "<group>"; };
 		83B1C4F71D105C0C004ACC01 /* Spotifyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B1C4FA1D105C0C004ACC01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B1C5011D105C0C004ACC01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				83B1C5381D10821C004ACC01 /* Artist.swift */,
+				8369839E1D13481D0018E9B1 /* SearchResultsData.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				83B1C5321D106CE5004ACC01 /* ArtistSearchController.swift in Sources */,
 				83B1C5391D10821C004ACC01 /* Artist.swift in Sources */,
 				83B1C4FB1D105C0C004ACC01 /* AppDelegate.swift in Sources */,
+				8369839F1D13481D0018E9B1 /* SearchResultsData.swift in Sources */,
 				83B1C53C1D10839E004ACC01 /* ArtistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

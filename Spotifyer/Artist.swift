@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Artist {
+struct fArtist: Parsable {
     let name: String
     let biography: String
     let photoURL: NSURL?
